@@ -1,0 +1,52 @@
+<table>
+    <tr>
+        <td>name</td>
+        <td>status</td>
+        <td>date of creation</td>
+        <td>date of last login</td>
+    </tr>
+    <% @users.each do |u| %>
+    <tr>
+            <td><%= u.login %></td>
+            <td><%= u.status %></td>
+            <td><%= u.date_create %></td>
+            <td><%= u.last_login %></td>
+    </tr>
+    <% end %>
+</table>
+
+
+<!--<div class="btn-toolbar btn-group-lg">
+    <button class="btn btn-primary">Remove</button>
+    <button class="btn btn-primary">Block</button>
+    <button class="btn btn-primary">UnBlock</button>
+</div>
+<table class="table">
+    <tr>
+        <td>name</td>
+        <td>password</td>
+        <td>status</td>
+        <td>date of creation</td>
+        <td>date of last login</td>
+        <td>action</td>
+    </tr>
+    <% @users.each do |u| %>
+    <tr>
+        <td><%= u.login %></td>
+        <td><%= u.password %></td>
+        <td><%= u.status %></td>
+        <td><%= u.created_at %></td>
+        <td><%= u.last_login %></td>
+        <td><%= check_box_tag "users",u.id, false %></td>
+        <td><%= link_to 'Редактировать', edit_user_path(u) %></td>
+    </tr>
+    <% end %>
+</table>
+<h1>Менеджер задач</h1>
+ 
+<% @users.each do |u| %>
+    <b><%= u.login %></b><br>
+    <p><%= link_to 'Удалить', user_path(u),
+              method: :delete,
+              data: { confirm: 'Вы уверены?' } %></p>
+<% end %>-->

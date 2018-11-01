@@ -1,0 +1,20 @@
+<%= form_for User.new do |f| %>
+    <%= f.text_field :login %>
+    <%= f.password_field :password, size: "10x8" %>
+    <%= f.submit "login" %>
+<% end %>
+<%= form_for User.new do |f| %>
+    <%= f.text_field :login %>
+    <%= f.password_field :password, size: "10x8" %>
+    <%= f.submit "sign_up" %>
+<% end %>
+<table class="table">
+<% User.all.each do |u| %>
+    <tr>
+            <td><%= u.login %></td>
+            <td><%= u.status %></td>
+            <td><%= u.date_create %></td>
+            <td><%= u.last_login %></td>
+    </tr>
+<% end %>
+</table>

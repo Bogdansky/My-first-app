@@ -1,0 +1,6 @@
+<h1>Войти или зарегистрироваться</h1>
+<%= form_for User.new do |f| %>
+    <%= f.text_field :login %>
+    <%= f.password_field :password, size: "10x8" %>
+    <%= f.submit "login" %>
+<% end %>
